@@ -1,0 +1,290 @@
+/* GLOBAL RULES */
+:root {
+  --first-color: #5038ed;
+  --second-color: #9181f4;
+  --main-radius: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*// GLOBAL RULES //*/
+
+/* MAIN */
+.content-container {
+  background-color: #404040;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container > div {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+  height: 90%;
+  border-radius: var(--main-radius);
+}
+/*// MAIN //*/
+
+/* LOGIN SECTION */
+.login-container {
+  width: 50%;
+  height: 100%;
+  padding: 10px 15px;
+  border-top-left-radius: var(--main-radius);
+  border-bottom-left-radius: var(--main-radius);
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 100%;
+  }
+}
+
+.login-container .lang-btn {
+  display: block;
+  width: fit-content;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--main-radius);
+  background-image: linear-gradient(
+    to right,
+    var(--second-color),
+    var(--first-color)
+  );
+  color: white;
+  box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container .lang-btn:hover {
+  opacity: 0.8;
+}
+
+.login-section {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.login-section .info {
+  font-size: 14px;
+  color: #525252;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .login-container .info {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.login-section form .user-name,
+.login-section form .password {
+  margin-bottom: 10px;
+}
+
+.login-section form .user-name input,
+.login-section form .password input {
+  padding: 11px 9px;
+  width: 60%;
+  border: none;
+  outline: none;
+  border-radius: var(--main-radius);
+  background-color: #eee;
+}
+
+.login-section form input[type="button"] {
+  padding: 16px 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--main-radius);
+  background-image: linear-gradient(
+    to right,
+    var(--second-color),
+    var(--first-color)
+  );
+  color: white;
+  box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-section form input[type="button"]:hover {
+  opacity: 0.8;
+}
+
+.login-section #or {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.login-section #or::before {
+  content: "";
+  position: absolute;
+  inset: 9px 0;
+  width: 70%;
+  height: 1px;
+  background-color: #f0edff;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.login-section .another-accounts {
+  margin-top: 20px;
+}
+
+.login-section .another-accounts .google,
+.login-section .another-accounts .facebook {
+  width: 60%;
+  margin: 0 auto;
+  padding: 7px 5px;
+  border: 1px solid #f0edff;
+  border-radius: var(--main-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.login-section .another-accounts .google {
+  margin-bottom: 12px;
+}
+
+.login-section .another-accounts .google img,
+.login-section .another-accounts .facebook img {
+  width: 25px;
+  height: 25px;
+}
+
+.login-section .another-accounts .google p,
+.login-section .another-accounts .facebook p {
+  display: inline-block;
+  margin-left: 7px;
+  font-size: 12px;
+}
+
+.login-section .another-accounts .google span,
+.login-section .another-accounts .facebook span {
+  font-weight: bold;
+}
+/*// LOGIN SECTION //*/
+
+/* IMAGE SECTION */
+.image-section-container {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--first-color),
+    var(--second-color)
+  );
+  border-top-right-radius: var(--main-radius);
+  border-bottom-right-radius: var(--main-radius);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .image-section-container {
+    display: none;
+  }
+}
+
+.image-section-container .overlay {
+  position: absolute;
+  inset: 0 0;
+  width: 300%;
+  height: 300%;
+  opacity: 8%;
+}
+
+.image-section {
+  position: relative;
+  z-index: 1000;
+  width: 60%;
+  height: 68%;
+  margin: 90px auto 0;
+  padding: 22px 18px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 46px;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 991px) {
+  .image-section {
+    height: 321px;
+  }
+}
+
+.image-section .content-details {
+  position: absolute;
+}
+
+.image-section .content-details p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  width: 50%;
+}
+
+@media (max-width: 991px) {
+  .image-section .content-details p {
+    font-size: 19px;
+    width: 52%;
+  }
+}
+
+.image-section .content-details .image {
+  width: 172%;
+  position: absolute;
+  right: -87px;
+  bottom: -117%;
+}
+
+.image-section .content-details .image img {
+  width: 100%;
+}
+
+.image-section .content-details .thunderbolt {
+  position: absolute;
+  left: -15%;
+  bottom: -65%;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section .content-details .thunderbolt img {
+  max-width: 55%;
+}
+/*// IMAGE SECTION //*/
